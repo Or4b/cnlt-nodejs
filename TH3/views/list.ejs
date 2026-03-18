@@ -1,0 +1,44 @@
+<%- include('layouts/header') %>
+<%- include('layouts/navbar') %>
+
+<header class="masthead" style="background-image: url('/assets/img/home-bg.jpg')">
+    <div class="container position-relative px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5 justify-content-center">
+            <div class="col-md-10 col-lg-8 col-xl-7">
+                <div class="page-heading">
+                    <h1><%= title %></h1>
+                    <span class="subheading">Tổng hợp các bài viết và chia sẻ</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="container px-4 px-lg-5">
+    <div class="row gx-4 gx-lg-5 justify-content-center">
+        <div class="col-md-10 col-lg-8 col-xl-7">
+            
+            <% posts.forEach(post => { %>
+                <div class="post-preview">
+                    <a href="/detail/<%= post.id %>">
+                        <h2 class="post-title"><%= post.title %></h2>
+                        <h3 class="post-subtitle"><%= post.description %></h3>
+                    </a>
+                    <p class="post-meta">
+                        Đăng bởi <%= post.author %> vào ngày <%= post.date %>
+                        
+                        <% if(post.hot) { %>
+                            <span class="badge bg-danger ms-2" style="font-size: 0.8rem;">Bài viết Nổi bật</span>
+                        <% } else { %>
+                            <span class="badge bg-secondary ms-2" style="font-size: 0.8rem;">Bình thường</span>
+                        <% } %>
+                    </p>
+                </div>
+                <hr class="my-4" />
+            <% }) %>
+
+        </div>
+    </div>
+</div>
+
+<%- include('layouts/footer') %>

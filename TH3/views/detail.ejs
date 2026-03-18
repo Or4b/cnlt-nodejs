@@ -1,0 +1,40 @@
+<%- include('layouts/header') %>
+<%- include('layouts/navbar') %>
+
+<header class="masthead" style="background-image: url('/assets/img/post-bg.jpg')">
+    <div class="container position-relative px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5 justify-content-center">
+            <div class="col-md-10 col-lg-8 col-xl-7">
+                <div class="post-heading">
+                    <h1><%= post.title %></h1>
+                    <h2 class="subheading"><%= post.description %></h2>
+                    <span class="meta">
+                        Đăng bởi <%= post.author %> vào ngày <%= post.date %>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<article class="mb-4">
+    <div class="container px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5 justify-content-center">
+            <div class="col-md-10 col-lg-8 col-xl-7">
+                <p>Đây là nội dung chi tiết của bài viết số <%= post.id %>. Trong thực tế, nội dung này sẽ được lưu trữ dài hơn trong Cơ sở dữ liệu.</p>
+                <p>Trạng thái bài viết: 
+                    <% if(post.hot) { %>
+                        <strong>Đang được chú ý</strong>
+                    <% } else { %>
+                        <strong>Chưa có nhiều lượt xem</strong>
+                    <% } %>
+                </p>
+                <p>
+                    <a href="/list" class="btn btn-primary mt-4">&larr; Quay lại danh sách</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</article>
+
+<%- include('layouts/footer') %>
