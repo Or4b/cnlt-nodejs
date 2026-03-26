@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <link rel="stylesheet" href="/css/style.css">
+    <meta charset="UTF-8">
+    <title>Tạo bài viết</title>
+</head>
+<body>
+    <h1>Tạo bài viết mới</h1>
+    
+    <form action="/blogposts/store" method="POST">
+        <p>
+            Tiêu đề:<br>
+            <input type="text" name="title" required>
+        </p>
+        <p>
+            Nội dung:<br>
+            <textarea name="body" rows="5" cols="40" required></textarea>
+        </p>
+        <button type="submit">Lưu bài viết</button>
+    </form>
+    
+    <br>
+    <a href="/">Về trang chủ</a>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <link rel="stylesheet" href="/css/style.css">
+    <meta charset="UTF-8">
+    <title>Trang chủ Blog</title>
+</head>
+
+<body>
+    <h1>Danh sách bài viết</h1>
+    <a href="/blogposts/new">Tạo bài viết mới</a>
+
+    <hr>
+
+    <ul>
+        <% posts.forEach(post=> { %>
+            <li>
+                <strong>
+                    <%= post.title %>
+                </strong><br>
+                <span>
+                    <%= post.body %>
+                </span><br>
+                <div class="action-buttons">
+                    <a href="/blogposts/<%= post._id %>">Xem chi tiết</a> |
+                    <a href="/blogposts/edit/<%= post._id %>">Sửa</a>
+
+                    <form action="/blogposts/delete/<%= post._id %>" method="POST" style="display:inline;">
+                        <button type="submit" class="btn-delete"
+                            onclick="return confirm('Bạn có chắc chắn muốn xóa bài này?')">Xóa</button>
+                    </form>
+                </div>
+            </li>
+            <br>
+            <% }) %>
+    </ul>
+</body>
+
+</html>
