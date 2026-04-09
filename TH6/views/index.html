@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang chủ - Thực hành Node.js Core</title>
+    <style>
+        body { font-family: Arial, sans-serif; background-color: #f4f7f6; color: #333; margin: 0; padding: 0; }
+        .container { max-width: 800px; margin: 50px auto; background: white; padding: 30px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
+        h1 { color: #2c3e50; text-align: center; border-bottom: 2px solid #3498db; padding-bottom: 10px; }
+        .menu { display: flex; flex-direction: column; gap: 15px; margin-top: 30px; }
+        .menu a { text-decoration: none; background: #3498db; color: white; padding: 15px; border-radius: 5px; font-weight: bold; text-align: center; transition: background 0.3s; }
+        .menu a:hover { background: #2980b9; }
+        .api-links { margin-top: 30px; padding-top: 20px; border-top: 1px dashed #ccc; display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; }
+        .api-links a { background: #27ae60; padding: 10px 15px; font-size: 14px; }
+        .api-links a:hover { background: #219150; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>BẢNG ĐIỀU KHIỂN TRUNG TÂM</h1>
+        <p style="text-align: center;">Bài thực hành số 6 - Module Core Node.js</p>
+        
+        <div class="menu">
+            <a href="/">1. Trang chủ (Trang hiện tại)</a>
+            <a href="/events">2. Trang Events (Minh họa EventEmitter)</a>
+            <a href="/request">3. Trang Request & Header (Kiểm tra HTTP)</a>
+            <a href="/streams">4. Trang Streams (Tổng hợp 4 loại Stream)</a>
+        </div>
+
+        <div class="api-links">
+            <a href="/json">Kiểm tra trả JSON</a>
+            <a href="/image">Test Stream Ảnh</a>
+            <a href="/event">Test Trigger Event</a>~
+            <a href="/download-log">Tải file Log</a>
+        </div>
+    </div>
+</body>
+</html>

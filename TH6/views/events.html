@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Sự kiện (EventEmitter)</title>
+    <style>
+        body { font-family: Arial, sans-serif; background-color: #f4f7f6; padding: 20px; text-align: center; }
+        .container { max-width: 600px; margin: 0 auto; background: white; padding: 30px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
+        button { padding: 15px 25px; font-size: 16px; background-color: #e74c3c; color: white; border: none; border-radius: 5px; cursor: pointer; margin: 20px 0; }
+        button:hover { background-color: #c0392b; }
+        a.back-btn { display: inline-block; margin-top: 20px; padding: 10px 15px; background: #95a5a6; color: white; text-decoration: none; border-radius: 5px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 style="color: #e74c3c;">Kiểm thử EventEmitter</h1>
+        <p>Bấm vào nút bên dưới để gửi yêu cầu kích hoạt sự kiện lên Server.</p>
+        <p><b>Lưu ý:</b> Hãy mở Terminal (cửa sổ chạy code Node.js) để xem Log được in ra!</p>
+        
+        <form action="/event" method="GET" target="_blank">
+            <button type="submit">KÍCH HOẠT SỰ KIỆN (BẤM NHIỀU LẦN)</button>
+        </form>
+
+        <a href="/" class="back-btn">Quay lại Trang chủ</a>
+    </div>
+</body>
+</html>

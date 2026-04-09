@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Thông tin Request & Header</title>
+    <style>
+        body { font-family: Arial, sans-serif; background-color: #f4f7f6; padding: 20px; }
+        .container { max-width: 800px; margin: 0 auto; background: white; padding: 30px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
+        h2 { color: #2980b9; border-bottom: 2px solid #ecf0f1; padding-bottom: 10px; }
+        pre { background: #2c3e50; color: #ecf0f1; padding: 15px; border-radius: 5px; overflow-x: auto; font-size: 14px; }
+        .info-box { margin-bottom: 20px; padding: 15px; background: #e8f6f3; border-left: 4px solid #1abc9c; font-size: 16px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 style="color: #2c3e50; text-align: center;">PHÂN TÍCH REQUEST & HEADER</h1>
+        <p style="text-align: center;">Hệ thống đã bắt được các thông tin bạn gửi lên như sau:</p>
+        
+        <div class="info-box">
+            <strong>Thông tin cơ bản (Request URL & Method):</strong>
+            <ul style="margin-top: 10px;">
+                <li><b>Method:</b> <span style="color: #e74c3c;">{{METHOD}}</span></li>
+                <li><b>URL gốc:</b> <span style="color: #3498db;">{{URL}}</span></li>
+                <li><b>Query (Dữ liệu đính kèm):</b> <span style="color: #f39c12;">{{QUERY}}</span></li>
+            </ul>
+        </div>
+
+        <h2>Dữ liệu Headers (Trình duyệt của bạn đang dùng)</h2>
+        <pre>{{HEADERS}}</pre>
+
+        <div style="text-align: center; margin-top: 30px;">
+            <a href="/" style="padding: 10px 20px; background: #95a5a6; color: white; text-decoration: none; border-radius: 5px;">Quay lại Trang chủ</a>
+            
+            <a href="/request?name=GiaBao&role=Admin&action=test" style="padding: 10px 20px; background: #e67e22; color: white; text-decoration: none; border-radius: 5px; margin-left: 10px;">Thử đính kèm Query String</a>
+        </div>
+    </div>
+</body>
+</html>
