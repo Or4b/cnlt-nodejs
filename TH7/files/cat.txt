@@ -1,0 +1,9 @@
+// server.js
+const http = require('http');
+const fs = require('fs');
+let content = 'Korat cat';
+let filePath = 'files/cat.txt';
+fs.appendFile(filePath, content, (err) => {
+if(err) throw err;
+console.log('The file was successfully updated.');
+});Korat cat
