@@ -1,0 +1,43 @@
+* { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+body { background-color: #f0f2f5; height: 100vh; overflow: hidden; }
+
+/* Ẩn hiện các màn hình */
+.screen { display: none; height: 100vh; }
+.screen.active { display: flex; }
+
+/* Form Login */
+#login-screen { justify-content: center; align-items: center; }
+.login-box { background: white; padding: 40px; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); text-align: center; }
+.login-box input { width: 100%; padding: 12px; margin: 20px 0; border: 1px solid #ccc; border-radius: 5px; font-size: 16px; }
+.login-box button { width: 100%; padding: 12px; background: #0084ff; color: white; border: none; border-radius: 5px; font-size: 16px; cursor: pointer; }
+
+/* Khung Chat Chính */
+#chat-screen { width: 100%; max-width: 1000px; margin: 0 auto; background: white; box-shadow: 0 0 20px rgba(0,0,0,0.05); }
+
+/* Sidebar User Online */
+.sidebar { width: 30%; background: #ffffff; border-right: 1px solid #e0e0e0; display: flex; flex-direction: column; }
+.sidebar h3 { padding: 20px; border-bottom: 1px solid #e0e0e0; background: #f8f9fa; color: #333; }
+#user-list { list-style: none; overflow-y: auto; flex: 1; }
+#user-list li { padding: 15px 20px; border-bottom: 1px solid #f0f0f0; cursor: pointer; transition: 0.2s; }
+#user-list li:hover { background: #f0f2f5; }
+#user-list li.selected { background: #e6f2ff; border-left: 4px solid #0084ff; font-weight: bold; }
+#user-list li.me { color: #888; font-style: italic; cursor: not-allowed; }
+
+/* Khung Chat Riêng */
+.chat-area { width: 70%; display: flex; flex-direction: column; background: #fff; }
+.chat-header { padding: 20px; border-bottom: 1px solid #e0e0e0; background: #f8f9fa; }
+.messages { flex: 1; padding: 20px; overflow-y: auto; background: #e5ddd5; display: flex; flex-direction: column; gap: 10px; }
+
+/* Style Tin nhắn */
+.msg-item { max-width: 70%; padding: 10px 15px; border-radius: 15px; position: relative; }
+.msg-item .info { font-size: 11px; color: #555; margin-bottom: 5px; }
+.msg-item .text { font-size: 15px; }
+
+.msg-incoming { background: white; align-self: flex-start; border-bottom-left-radius: 0; box-shadow: 0 1px 2px rgba(0,0,0,0.1); }
+.msg-outgoing { background: #dcf8c6; align-self: flex-end; border-bottom-right-radius: 0; box-shadow: 0 1px 2px rgba(0,0,0,0.1); }
+
+/* Thanh nhập liệu */
+.input-area { display: flex; padding: 15px; background: #f0f0f0; }
+.input-area input { flex: 1; padding: 12px; border: none; border-radius: 20px; outline: none; margin-right: 10px; }
+.input-area button { padding: 10px 20px; background: #0084ff; color: white; border: none; border-radius: 20px; cursor: pointer; }
+.input-area button:disabled { background: #ccc; cursor: not-allowed; }
